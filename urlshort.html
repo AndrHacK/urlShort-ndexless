@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title></title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		
+//D1Y4R R00T
+		
+		var saniye = 10;
+		$.geriyeSay = function(){
+			if (saniye > 1){
+				saniye--;
+				$("#navbar strong").text(saniye);
+			} else {
+				// yönlendirme işlemi
+				window.location.href = "http://wolink.in";
+			}
+		}
+		$("#navbar strong").text(saniye);
+		setInterval("$.geriyeSay()", 1000);
+		
+	});
+	</script>
+	<style type="text/css">
+	body {margin: auto}
+	#navbar {padding: 10px; background: #f6f6f6; border-bottom: 4px solid #ddd; font: 14px Arial}
+	</style>
+</head>
+<body>
+
+<div id="navbar">
+	<strong></strong> saniye sonra yönlendirileceksiniz..
+</div>
+
+</body>
+</html>
